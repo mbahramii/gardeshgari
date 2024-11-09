@@ -1,0 +1,58 @@
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+
+
+.ck-rest h1{
+  font-size: 65px;
+
+}
+.ck-rest h2{
+  font-size: 50px;
+
+}
+@font-face {
+  font-family: 'tick-circlee';
+  src:  url('fonts/tick-circlee.eot?nytwl8');
+  src:  url('fonts/tick-circlee.eot?nytwl8#iefix') format('embedded-opentype'),
+    url('fonts/tick-circlee.ttf?nytwl8') format('truetype'),
+    url('fonts/tick-circlee.woff?nytwl8') format('woff'),
+    url('fonts/tick-circlee.svg?nytwl8#tick-circlee') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-tick-circlee"], [class*=" icon-tick-circlee"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'tick-circlee' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+ -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tick-circleetick-circle:before {
+  content: "\e900";
+  color: #797979;
+}
