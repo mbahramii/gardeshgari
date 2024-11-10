@@ -14,6 +14,7 @@ function Modal({ showModal, setShowModal }) {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
+
   useEffect(() => {
     const storedPhone = localStorage.getItem("phone");
     if (storedPhone) {
@@ -21,6 +22,8 @@ function Modal({ showModal, setShowModal }) {
     }
   }, []);
 
+
+  // فرستادن شماره 
   const handlePhoneSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -61,9 +64,12 @@ function Modal({ showModal, setShowModal }) {
     setIsLoading(true);
     setErrorMessage("");
 
+
+    // تبدیل  OTP  به رشته استرینگ 
     const code = otp.join("");
     const storedPhone = localStorage.getItem("phone");
 
+    // فرستادن کد 
     try {
       const response = await fetch("http://127.0.0.1:8000/api/confirm-code", {
         method: "POST",
@@ -78,7 +84,7 @@ function Modal({ showModal, setShowModal }) {
         setShowModal(false);
         setVerificationSuccess(true);
 
-        toast.success("پروفایل با موفقیت تکمیل شد!", {
+        toast.success("ثبت نام موفقیت امیز بود !! ", {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,

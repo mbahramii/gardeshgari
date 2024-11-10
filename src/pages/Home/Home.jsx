@@ -13,7 +13,7 @@ const HomePage = ({ showModal, setShowModal }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  
+  // گرفتن مقالات 
   useEffect(() => {
     const fetchArticles = async () => {
       try {
