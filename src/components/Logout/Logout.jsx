@@ -5,6 +5,8 @@ import sad from "./img/sad.svg";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
+// کامپوننت لاگ اوت باعث حذف توکن و شماره در لوکال استورج میشود 
 function LogoutConfirmation() {
   const [showPopup, setShowPopup] = useState(true);
 
@@ -19,6 +21,7 @@ function LogoutConfirmation() {
       progress: undefined,
     });
 
+    // پاک کردن لوکال استورج 
     localStorage.clear();
     setShowPopup(false);
 

@@ -4,16 +4,22 @@ import moment from "jalali-moment";
 import { FaRegClock } from "react-icons/fa6";
 import { PiCalendarDots } from "react-icons/pi";
 
+// تبدیل اعداد انگلیسی به فارسی 
 const toPersianDigits = (num) =>
   num.replace(/\d/g, (digit) => "۰۱۲۳۴۵۶۷۸۹"[digit]);
 
+
+// این کامپوننت ارتیکل را از سرور میگیرد و برای فراخوانی در صفحه هوم پیج بکار میرود 
+
 const HomeArticle = ({ id, title, imageUrl, content, createdAt }) => {
   const navigate = useNavigate();
+  // تبدیل تاریخ و زمان به شمسی 
   const persianDate = moment(createdAt).locale("fa").format("YYYY/MM/DD");
   const persianTime = moment(createdAt).locale("fa").format("HH:mm");
   const persianDateWithFarsiNumbers = toPersianDigits(persianDate);
   const persianTimeWithFarsiNumbers = toPersianDigits(persianTime);
 
+  // با کلیک شما به محتوای ارتیکل میروید 
   const handleClick = () => {
     navigate(`/article-page/${id}`);
   };

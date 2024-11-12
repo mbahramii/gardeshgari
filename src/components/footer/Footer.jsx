@@ -31,10 +31,10 @@ const Footer = () => {
 
           </h1>
       </div>
+      {/* سایز مویابل  */}
       <div className="block md:hidden">
         <div className="block md:hidden">
           <div className="flex justify-around items-center mb-7">
-              {/* Social icons */}
               <div className="flex flex-col gap-1">
                 <h5 className="text-[#1BE6E3]">: شبکه های اجتماعی ما  </h5>
                 <div className="flex justify-center gap-1">
@@ -48,13 +48,9 @@ const Footer = () => {
                 <img className="m-1 w-[35px] h-[35px] lg:w-[79px] lg:h-[79px]" src={logo} alt="logo" />
               </div>
            </div>
-          {/* Right section (logo and description) */}
-  
 
-          {/* Middle section (links) */}
         <div className="flex justify-center gap-5 text-[8px]">
             
-            {/* User profile links */}
             <div className="max-w-[110px] flex flex-col items-center gap-3 text-center">
               <h5 className="text-[#1BE6E3] font-bold text-lg">خدمات سریع</h5>
               <ul className="tracking-tighter	 text-[12px]">
@@ -68,7 +64,6 @@ const Footer = () => {
 
             </div>
 
-            {/* Contact links */}
             <div className="max-w-[100px]  flex flex-col items-center gap-3 text-center">
               <h5 className="text-[#1BE6E3] font-bold text-lg">ارتباط با ما</h5>
               <ul className="text-[12px]">
@@ -111,14 +106,14 @@ const Footer = () => {
       </div>    
 
 
-      {/* for labtop  برای سایز لارج  */}
+      {/*برای سایز لارج  */}
 
     <div className="hidden md:flex justify-center max-w-[1200px] container mx-auto ">
       <div className="flex">
         <div className="flex flex-col justify-around">
                         <div className="flex  justify-center gap-5 text-[8px]">
             
-            {/* User profile links */}
+
                           <div className="max-w-[180px] flex flex-col items-center gap-3 text-center">
                             <h5 className="text-[#1BE6E3] font-bold text-lg">خدمات سریع</h5>
                             <ul className=" text-[18px]">
@@ -131,7 +126,7 @@ const Footer = () => {
                             </ul>
                           </div>
 
-            {/* Contact links */}
+          
                           <div className="max-w-[180px]  flex flex-col items-center gap-3 text-center">
                             <h5 className="text-[#1BE6E3] font-bold text-lg">ارتباط با ما</h5>
                             <ul className="text-[18px]">
@@ -200,15 +195,7 @@ const Footer = () => {
        
             <div></div>
           </div>
-        {/* </div> */}
-      {/* </div> */}
 
-      {/* // </div> */}
-
-      {/* Footer Bottom */}
-      {/* <div className="bg-teal-800 text-center py-4 mt-10">
-        <p className="text-xs">© تمامی حقوق این سایت متعلق به سفریکو است.</p>
-    </div> */}
     </footer>
   );
 };

@@ -10,7 +10,7 @@ import articlev from "../components/AddArticle/img/article.mp4";
 
 
 
-
+// این کامپوننت منو برای بخش ارتیکل هست که برای راحتی در فراخوانی به صورت کامپوننت جدای از صفحه ارتیکل ها زده شده 
 const ArticleMenu = () => {
     const [isFirstMenuOpen, setIsFirstMenuOpen] = useState(true); 
     const [isActive , setIsActive ] = useState ("")
@@ -29,31 +29,37 @@ const ArticleMenu = () => {
            
                        <div className="p-4 container mx-auto md:hidden ">
                          <ul className="flex justify-center sm:flex sm:justify-center mt-6 items-center gap-4 w-[200px] sm:w-[500px] container mx-auto  ">
+                        {/* در صورت کلیک روی لینک رنگ لینک و دکمه تغییر میکند  */}
                          <Link to="/mytravels">
                            <div className=" flex my-3" onClick={() => toggleActive("write")}>
                            <SiLibreofficewriter  className={`w-7 h-7 mx-1 text-black  ${isActive === "write" ? 'text-blue-900 ' : ''}`} />
                            </div>
                          </Link>
+                        {/* در صورت کلیک روی لینک رنگ لینک و دکمه تغییر میکند  */}
                          <Link to="/empty1">
                            <div className="flex my-3" onClick={() => toggleActive("experience")}>
                            <FaRegCircleCheck  className={`w-7 h-7 mx-1 text-black  ${isActive === "experience" ? 'text-green-600':''}`}  />
                            </div>
                          </Link>
+                        {/* در صورت کلیک روی لینک رنگ لینک و دکمه تغییر میکند  */}
                          <Link to="/empty1">
                            <div className="flex my-3" onClick={() => toggleActive("chart")}>
                            <BsBarChartLine  className={`w-7 h-7 mx-1 text-black  ${isActive === "chart" ? 'text-yellow-500' : ''}`} />
                            </div>
                          </Link>
+                        {/* در صورت کلیک روی لینک رنگ لینک و دکمه تغییر میکند  */}
                          <Link to="/empty1">
                            <div className="flex my-3" onClick={() => toggleActive("travel")}>
                            <BiSolidHeartCircle className={`w-7 h-7 mx-1 text-black  ${isActive=== "travel" ? 'text-red-900' : ''}`}/>
                            </div>
                          </Link>
+                        {/* در صورت کلیک روی لینک رنگ لینک و دکمه تغییر میکند  */}
                          <Link to="/empty1">
                            <div className="flex my-3" onClick={() => toggleActive("save")}>
                            <BsBookmarks className={`w-7 h-7 mx-1 text-black  ${isActive === "save" ? 'text-amber-950' : ''}`} />
                            </div>
                          </Link>
+                        {/* در صورت کلیک روی لینک رنگ لینک و دکمه تغییر میکند  */}    
                          <Link to="/empty1">
                            <div className="flex my-3" onClick={() => toggleActive("mypoint")}>
                            <CiMedal className={`w-7 h-7 mx-1 text-black  ${isActive === "mypoint" ? 'text-blue-600' : ''}`} />
@@ -91,6 +97,7 @@ const ArticleMenu = () => {
                           <p className="text-black">670 Points</p>
                         </div>
                         <ul className="mt-2 no-underline ">
+                        {/* در صورت کلیک روی لینک رنگ لینک و دکمه تغییر میکند  */}       
                         <Link to="/mytravels" >
                           <div  onClick={() => toggleActive("write")} 
                           className={` over:bg-[#9DDAF9] hover:rounded-md flex items-center my-7  no-underline text-black  ${isActive === "write" ? 'text-blue-900 ' : ''}`} >
@@ -98,8 +105,7 @@ const ArticleMenu = () => {
                               <li className={` p-2 border-b border-gray-300 text-[20px] `} >نوشتن تجربه جدید سفر</li>
                           </div>
                               </Link>
-         
-
+                        {/* در صورت کلیک روی لینک رنگ لینک و دکمه تغییر میکند  */}
                               <Link to="/empty1">
                           <div 
                           onClick={() => toggleActive("experience")} 
@@ -110,6 +116,7 @@ const ArticleMenu = () => {
                           </div>
                               </Link>
          
+                        {/* در صورت کلیک روی لینک رنگ لینک و دکمه تغییر میکند  */}
                               <Link to="/empty1">
                           <div
                           onClick={() => toggleActive("chart")} 
@@ -120,6 +127,7 @@ const ArticleMenu = () => {
                           </div>
                               </Link>
          
+                        {/* در صورت کلیک روی لینک رنگ لینک و دکمه تغییر میکند  */}    
                               <Link to="/empty1">
                           <div
                             onClick={() => toggleActive("travel")}
@@ -130,7 +138,7 @@ const ArticleMenu = () => {
                           </div>
                                 </Link>
          
-
+                        {/* در صورت کلیک روی لینک رنگ لینک و دکمه تغییر میکند  */}
                                 <Link to="/empty1">
                           <div 
                           className= {` hover:bg-[#9DDAF9] text-black hover:rounded-md flex items-center my-7 ${isActive === "save" ? 'text-blue-950' : ''} `}
@@ -141,7 +149,7 @@ const ArticleMenu = () => {
                           </div>
                                </Link>
 
-
+                        {/* در صورت کلیک روی لینک رنگ لینک و دکمه تغییر میکند  */}
                                   <Link to="/empty1">
                           <div
                            onClick={() => toggleActive("mypoint")}

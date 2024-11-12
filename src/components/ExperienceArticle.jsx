@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
+
+// این کامپوننت ارتیکل را از سرور میگیرد و برای فراخوانی در صفحه اکسپرینس ارتیکل بکار میرود 
 const ExperienceArticle = ({ article }) => {
   const navigate = useNavigate(); 
 

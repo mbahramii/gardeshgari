@@ -1,8 +1,8 @@
 import world from "../../pages/Home/imghome/global.png"
 
+// کامپوننت زبان 
 const Languag= () => {
     return (
-
 
     <div>
       <div className="max-w-[300px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[1000px] flex justify-start container mx-auto mt-14">

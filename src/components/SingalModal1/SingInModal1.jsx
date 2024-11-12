@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";
 import { ToastContainer, toast } from "react-toastify";  // وارد کردن توست‌ها
 import "react-toastify/dist/ReactToastify.css";  // وارد کردن استایل توست
 
-function Modal({ showModal, setShowModal }) {
+
+
+function Login({ showModal, setShowModal }){
   const [step, setStep] = useState(1);
   const [verificationSuccess, setVerificationSuccess] = useState(false);
   const [phone, setPhone] = useState("");
@@ -176,6 +178,8 @@ function Modal({ showModal, setShowModal }) {
         {errorMessage && (
           <div className="text-red-500 text-center mb-4">{errorMessage}</div>
         )}
+
+        {/* صفحه اول که باید شماره زد  */}
         {step === 1 && (
           <form onSubmit={handlePhoneSubmit} className="space-y-4">
             <div>
@@ -184,7 +188,7 @@ function Modal({ showModal, setShowModal }) {
               </label>
               <Input
                 type="tel"
-                placeholder="مثلا 09121234567"
+                placeholder=" 09101381740"
                 value={phone}
                 pattern="09[0-9]{9}"
                 required
@@ -204,6 +208,7 @@ function Modal({ showModal, setShowModal }) {
             </div>
           </form>
         )}
+        {/* صفحه دوم برای زدن کد هستش که 6 کد داره  */}
         {step === 2 && (
           <form onSubmit={handleCodeSubmit} className="space-y-4">
             <div className="max-w-md mx-auto bg-white p-8 rounded-lg">
@@ -251,5 +256,5 @@ function Modal({ showModal, setShowModal }) {
   );
 }
 
-export default Modal;
+export default Login;
 

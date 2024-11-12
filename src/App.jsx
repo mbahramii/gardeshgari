@@ -27,6 +27,7 @@ import MyExperience from "./pages/MyExperience";
 import PublishingArticle from "./pages/PublishingArticle";
 import Navbar from "./components/menubar/Navbar";
 import ArticlePage from "./pages/ArticlePage";
+import LoadingSpinner from "./pages/LoadingSpinner";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -61,7 +62,7 @@ function App() {
           <Route path="/article-page/:id" element={<ArticlePage />} />
           {/* <Route path="/myexperience/*" element={<MyExperience />} /> */}
           <Route path="/myexperience/*" element={<MyExperience />} />
-
+          <Route path="/loading"  element={<LoadingSpinner /> } />
         </Routes>
       </Router>
     </div>

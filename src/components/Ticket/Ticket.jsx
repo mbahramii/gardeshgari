@@ -23,7 +23,8 @@ const translateStatus = (status) => {
   }
 };
 
-function Ticket({ ticketId, title, date, status }) {
+
+ const Ticket = ({ ticketId, title, date, status }) =>  {
   return (
     <div className="bg-accent-600 rounded-lg text-white w-full" dir="rtl">
       <div className="w-full overflow-x-auto">
@@ -48,6 +49,7 @@ function Ticket({ ticketId, title, date, status }) {
             <h2 className="text-sm font-bold">مشاهده</h2>
             <button>
 
+              {/* لینک رفتن به صفحه چت برای اون تیکت مورد نظر   */}
               <Link to={`/profile/tickets/ticket-chat/${ticketId}`}>
     <FaEye className="w-5 h-5" />
 </Link>

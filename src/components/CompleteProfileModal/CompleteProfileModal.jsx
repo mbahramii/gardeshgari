@@ -7,17 +7,21 @@ import { FaTriangleExclamation } from "react-icons/fa6";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
+// برای تکمیل پروفایل کاربر این کامپ.ننت  بصورت مدال نمایش داده میشود 
 function CompleteProfileModal({
   showCompleteProfileModal,
   setShowCompleteProfileModal,
 }) {
-  const [fullName, setFullName] = useState("");
-  const [username, setUsername] = useState("");
-  const [avatarInput, setAvatarInput] = useState(null);
-  const [errorMessage, setErrorMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [step, setStep] = useState(1);
+  const [fullName, setFullName] = useState(""); // ذخیره نام کامل
+  const [username, setUsername] = useState(""); // ذخیره نام کاربری
+  const [avatarInput, setAvatarInput] = useState(null); // ذخیره تصویر آواتار
+  const [errorMessage, setErrorMessage] = useState(""); // پیام خطا
+  const [isLoading, setIsLoading] = useState(false); // وضعیت در حال بارگذاری
+  const [step, setStep] = useState(1); // وضعیت مرحله مودال
 
+  
+   // تابع برای تغییر تصویر آواتار
   const handleAvatarChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -27,6 +31,8 @@ function CompleteProfileModal({
     }
   };
 
+
+    // تابع برای ارسال اطلاعات پروفایل به سرور
   const handleProfileSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -39,6 +45,7 @@ function CompleteProfileModal({
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            // افزودن توکن برای احراز هویت
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
           body: JSON.stringify({
@@ -61,8 +68,8 @@ function CompleteProfileModal({
           theme: "colored",
         });
   
-        console.log(await response.json());
-        setShowCompleteProfileModal(false);
+        // console.log(await response.json());
+        setShowCompleteProfileModal(false);// بستن مودال
       } else {
         const data = await response.json();
         setErrorMessage(data.message || "خطایی رخ داده است.");
@@ -80,6 +87,7 @@ return (
     <div className="fixed w-full inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50">
       <div className="w-full bg-white rounded-lg shadow-lg max-w-md  p-6 sm:p-8">
         {step === 1 && (
+          // صفحه اول که به کاربر اخطار میده باید پروفایل و تکمیل کند 
           <div className="flex flex-col justify-between items-center mb-4 animate-fadeIn">
             {/* Close Button */}
             <div className="flex flex-row w-full justify-start">
@@ -125,7 +133,7 @@ return (
             </div>
           </div>
         )}
-
+          {/* صفحه دوم که کاربر پروفایل را کامپلیت کند  */}
         {step === 2 && (
           <div className="animate-fadeIn">
             <div className="flex flex-col justify-between items-center mb-4">

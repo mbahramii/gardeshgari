@@ -20,13 +20,13 @@ const Navbar = ({ showModal, setShowModal }) => {
   const [buttton , setButtton ] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-
+  // بررسی احراز هویت کاربر با استفاده از توکن و تلفن ذخیره شده در localStorage
   useEffect(() => {
     const token = localStorage.getItem("token");
     const phone = localStorage.getItem("phone");
     if (token && phone) setIsAuthenticated(true);
   }, []);
-
+  // اگر مودال بسته شده باشد، دوباره احراز هویت را بررسی می‌کند
   useEffect(() => {
     if (!showModal) {
       const token = localStorage.getItem("token");
@@ -35,6 +35,8 @@ const Navbar = ({ showModal, setShowModal }) => {
     }
   }, [showModal]);
 
+  // دکمه برای ایجاد گزینه سرچ 
+  
   const handleSearchToggle = () => setSearch(!search);
 
 
@@ -47,6 +49,7 @@ const Navbar = ({ showModal, setShowModal }) => {
         
         <div className="bg-white border-2 rounded-sm border-blue-500 flex justify-between items-center md:hidden">
           <div className="flex items-center justify-start mx-2">
+            {/* اگر کاربر احراز هویت شده، لینک پروفایل نمایش داده می‌شود؛ در غیر این صورت، دکمه ثبت‌نام */}
             {isAuthenticated ? (
               <Link to="/profile" className="bg-[#1EB5FF] border-yellow-400 text-yellow-400 px-4 py-2 rounded">
                 پروفایل
@@ -60,6 +63,8 @@ const Navbar = ({ showModal, setShowModal }) => {
           <div className="flex justify-center items-center">
             <img src={logo} alt="Logo" className="w-12 h-12 rounded-full" />
           </div>
+
+          {/* دکمه باز و بسنه کردن منو موبایل  */}
           <div className="flex items-center justify-end space-x-[3px]">
             <Button onClick={() => setIsOpen(!isOpen)} variant="ghost">
               {isOpen ? <X className="w-8 h-8 text-black" /> : <Menu className="w-8 h-8 text-black" />}
@@ -67,6 +72,8 @@ const Navbar = ({ showModal, setShowModal }) => {
           </div> 
         </div>
 
+
+        {/* منوی موبایل در حالت باز */}
         {isOpen && (
           <div className="h-80 md:hidden bg-white" dir="rtl"> 
             <div className="space-y-5">
@@ -114,6 +121,7 @@ const Navbar = ({ showModal, setShowModal }) => {
             </div>
           </div>
         )}
+          {/* نمایش فرم جستجو در صورت فعال بودن */}
 
         {!search ? (
           <div className="hidden md:flex justify-between items-center p-3 lg:w-[1000px] xl:w-[1090px] md:h-full">
@@ -145,6 +153,7 @@ const Navbar = ({ showModal, setShowModal }) => {
                   <h1 className="text-white" >
                     تجربه های سفر
                   </h1>
+                  {/* وقتی روی گزینه تجربه های سفر میزنیم یه دوتا گزینه بصورت منو کشویی باز میشه  */}
                   {dropdownOpen && (
                     <div className="absolute right-0 mt-2 w-40 bg-white rounded shadow-lg">
                       <ul>
