@@ -219,14 +219,14 @@ function Login({ showModal, setShowModal }){
               <div className="flex justify-center gap-2 mb-6 flex-row-reverse">
                 {otp.map((_, index) => (
                   <Input
-                    key={index}
-                    id={`otp-${index}`}
-                    type="text"
-                    maxLength={1}
-                    value={otp[index]}
-                    onChange={(e) => handleChange(e, index)}
-                    className="w-10 h-10 text-center border border-accent-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 md:w-12 md:h-12"
-                  />
+  key={index}
+  id={`otp-${index}`}  // تغییر به `otp-${index}`
+  type="text"
+  maxLength={1}
+  value={otp[index]}
+  onChange={(e) => handleChange(e, index)}
+  className="w-10 h-10 text-center border border-accent-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 md:w-12 md:h-12"
+/>
                 ))}
               </div>
               <div className="flex flex-row text-center mb-4 gap-1 text-xs text-gray-500">

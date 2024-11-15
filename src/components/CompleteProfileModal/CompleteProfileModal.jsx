@@ -68,7 +68,7 @@ function CompleteProfileModal({
           theme: "colored",
         });
   
-        // console.log(await response.json());
+        console.log(await response.json());
         setShowCompleteProfileModal(false);// بستن مودال
       } else {
         const data = await response.json();

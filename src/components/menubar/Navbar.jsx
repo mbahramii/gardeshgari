@@ -110,7 +110,7 @@ const Navbar = ({ showModal, setShowModal }) => {
                           <Link to="/travelexperience"> صفحه تجربیات </Link>
                         </li>
                         <li className="hover:bg-gray-300 text-black px-4 py-2">
-                          <Link  to="/myexperience" > تجربه سفر من </Link>
+                          <Link  to="/mytravels" > تجربه سفر من </Link>
                         </li>
                       </ul>
                     </div>
@@ -161,7 +161,7 @@ const Navbar = ({ showModal, setShowModal }) => {
                           <Link to="/travelexperience"> صفحه تجربیات </Link>
                         </li>
                         <li className="hover:bg-gray-300 text-black px-4 py-2">
-                          <Link  to="/myexperience" > تجربه سفر من </Link>
+                          <Link  to="/mytravels" > تجربه سفر من </Link>
                         </li>
                       </ul>
                     </div>

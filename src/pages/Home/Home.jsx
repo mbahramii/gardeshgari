@@ -7,6 +7,8 @@ import HomeArticle from "../../components/HomeArticle";
 import Footer from "../../components/footer/Footer";
 import mapiran from "./imghome/map iran.png";
 import { Input } from "../../components/ui/input";
+import Select from "react-select/base";
+import SelectedArticles from "../../components/SelectedArticles";
 
 const HomePage = ({ showModal, setShowModal }) => {
   const [articles, setArticles] = useState([]);
@@ -84,16 +86,40 @@ const HomePage = ({ showModal, setShowModal }) => {
         </div>
       </div>
 
-
-        <div className=" my-5 p-5 rounded-lg">
-          <h1 className="text-xl py-5 font-semibold" dir="rtl">مقالات جدید این ماه</h1>
-
+      <div className=" my-5 p-5 rounded-lg">
+          <h1 className=" text-xl py-5 font-semibold" dir="rtl">مقالات منتخب ماه</h1>
           {loading ? (
             <p>در حال بارگذاری...</p>
           ) : error ? (
             <p className="text-red-500">{error}</p>
           ) : (
-            <div className="grid gap-4">
+            <div className="flex flex-wrap items-center justify-center max-w-[1000px] container mx-auto gap-3">
+              {/* {articles.map((article) => ( */}
+              {articles
+        .filter((article) => article.id === 1 ||  article.id === 4 || article.id === 2 || article.id === 8 || article.id === 9  ) // فیلتر مقالات با ایدی 45 و 46
+        .map((article) => (
+                < SelectedArticles
+                  key={article.id}
+                  id={article.id}
+                  title={article.title}
+                  imageUrl={article.img}
+                  // content={article.content}
+                  // createdAt={article.created_at}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className=" my-5 p-5 rounded-lg">
+        <h1 className="text-xl py-5 font-semibold" dir="rtl">مقالات جدید این ماه</h1>
+          
+          {loading ? (
+            <p>در حال بارگذاری...</p>
+          ) : error ? (
+            <p className="text-red-500">{error}</p>
+          ) : (
+            <div className="">
               {articles.map((article) => (
                 <HomeArticle
                   key={article.id}
