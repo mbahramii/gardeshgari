@@ -83,7 +83,8 @@ const MyExperienceArticle = ({ initialArticleId }) => {
     formData.append("address", address);
     formData.append("publishTime", publishTime);
     formData.append("visitCost", visitCost);
-
+    setActive(!active)
+    
     try {
       const token = localStorage.getItem("token");
       const response = await fetch("http://127.0.0.1:8000/api/user/articles", {

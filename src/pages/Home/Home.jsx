@@ -43,6 +43,8 @@ const HomePage = ({ showModal, setShowModal }) => {
     fetchArticles();
   }, []);
 
+
+
   return (
     <div>
       <div className=" font-normal flex flex-col mt-4 md:w-[700px] lg:w-[1000px] xl:w-[1250px]  container mx-auto  bg-white">
@@ -94,17 +96,15 @@ const HomePage = ({ showModal, setShowModal }) => {
             <p className="text-red-500">{error}</p>
           ) : (
             <div className="flex flex-wrap items-center justify-center max-w-[1000px] container mx-auto gap-3">
-              {/* {articles.map((article) => ( */}
               {articles
-        .filter((article) => article.id === 1 ||  article.id === 4 || article.id === 2 || article.id === 8 || article.id === 9  ) // فیلتر مقالات با ایدی 45 و 46
+        .filter((article) => article.id === 2 ||  article.id === 4 || article.id === 5 || article.id === 6 || article.id === 945545  ) // فیلتر مقالات با ایدی 45 و 46
         .map((article) => (
                 < SelectedArticles
                   key={article.id}
                   id={article.id}
                   title={article.title}
                   imageUrl={article.img}
-                  // content={article.content}
-                  // createdAt={article.created_at}
+
                 />
               ))}
             </div>

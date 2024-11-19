@@ -41,14 +41,14 @@ const Navbar = ({ showModal, setShowModal }) => {
 
 
   return (
-    <div className="w-[300px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1270px] flex gap-2 container mx-auto mt-3">
+    <div className="w-[300px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1040px] flex justify-center gap-2 container mx-auto mt-3">
       <div className="max-w-[290px]">
         <Modal showModal={showModal} setShowModal={setShowModal} />
       </div>
       <nav className=" bg-[#1EB5FF] h-full w-[300px] sm:w-[600px] md:w-[700px] lg:w-[1000px]  xl:w-[1200px] container mx-auto rounded-xl">
         
         <div className="bg-white border-2 rounded-sm border-blue-500 flex justify-between items-center md:hidden">
-          <div className="flex items-center justify-start mx-2">
+          <div className="flex items-center justify-between mx-2">
             {/* اگر کاربر احراز هویت شده، لینک پروفایل نمایش داده می‌شود؛ در غیر این صورت، دکمه ثبت‌نام */}
             {isAuthenticated ? (
               <Link to="/profile" className="bg-[#1EB5FF] border-yellow-400 text-yellow-400 px-4 py-2 rounded">
@@ -124,8 +124,8 @@ const Navbar = ({ showModal, setShowModal }) => {
           {/* نمایش فرم جستجو در صورت فعال بودن */}
 
         {!search ? (
-          <div className="hidden md:flex justify-between items-center p-3 lg:w-[1000px] xl:w-[1090px] md:h-full">
-            <div className="flex items-center space-x-4">
+          <div className="hidden md:flex justify-between items-center p-3 md:w-[600px] lg:w-[900px] xl:w-[1161px] md:h-full">
+            <div className="flex items-center space-x-1">
               <Button className="bg-[#FF8F00] text-white px-4 py-2 rounded">دانلود اپلیکیشن</Button>
               {isAuthenticated ? (
                 <Button variant="outline" className="bg-[#1EB5FF] border-yellow-400 text-yellow-400 px-4 py-2 rounded">
@@ -143,14 +143,14 @@ const Navbar = ({ showModal, setShowModal }) => {
               جستجو
             </Button>
             <div dir="rtl" className="">
-              <ul className="flex justify-center space-x-4 w-[600px] gap-[24px] text-white text-[12px] lg:font-bold lg:text-[16px]">
-                <li className="ml-4" >مقالات گردشگری</li>
-                <li className="ml-4">ایران شناسی</li>
-                <li className="ml-4">برنامه ریزی سفر</li>
+              <ul className="flex md:justify-end lg:justify-center md:w-[400px] lg:w-[600px] md:gap-[1px] lg:gap-[24px] text-white text-[12px] lg:font-bold lg:text-[16px]">
+                <li className="md:w-16 lg:w-[110px]" >مقالات گردشگری</li>
+                <li className="md:w-[58px] lg:w-[110px]">ایران شناسی</li>
+                <li className=" md:w-16 lg:w-[110px]">برنامه ریزی سفر</li>
                  <li
-                  className="relative ml-4"
+                  className="relative"
                   onClick={() => setDropdownOpen(!dropdownOpen)}>
-                  <h1 className="text-white" >
+                  <h1 className="text-white md:w-16 lg:w-[110px]">
                     تجربه های سفر
                   </h1>
                   {/* وقتی روی گزینه تجربه های سفر میزنیم یه دوتا گزینه بصورت منو کشویی باز میشه  */}
@@ -172,7 +172,7 @@ const Navbar = ({ showModal, setShowModal }) => {
           </div>
         ) : (
           <div dir="rtl" className="hidden md:h-[92px] md:flex justify-between items-center mx-3">
-            <Input type="text" placeholder="جستجو" className="border p-2 rounded border-gray-700 w-60 bg-white " />
+            <Input type="text" placeholder="جستجو" className="border p-2 rounded border-gray-700 w-56 bg-white " />
             <Button onClick={handleSearchToggle}>بازگشت</Button>
           </div>
         )}
