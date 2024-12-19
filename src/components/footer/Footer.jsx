@@ -4,15 +4,15 @@ import React from "react";
 import logo from "../menubar/imgmenu/Logo.svg"
 import Instagram  from "./imgfooter/Instagram.png";
 import  Linkedin  from "./imgfooter/Linkedin.png";
-import telegram from "./imgfooter/telegram.png"
+import telegram from "./imgfooter/Telegram.png"
 import { Input } from "@/components/ui/input";
 import picture from "./imgfooter/picture.png"
 import picture1 from "./imgfooter/picture1.png"
 import picture2 from "./imgfooter/picture2.png"
 import picture3 from "./imgfooter/picture3.png"
-import telegramm from "./imgfooter/labtop/telegram.png"
-import Instagramm from "./imgfooter/labtop/instagram.png"
-import Linkedinn from "./imgfooter/labtop/linkedin.png"
+import telegramm from "./imgfooter/labtop/Telegram.png"
+import Instagramm from "./imgfooter/labtop/Instagram.png"
+import Linkedinn from "./imgfooter/labtop/Linkedin.png"
 import picturee from "./imgfooter/labtop/picturee.png"
 import picture11 from "./imgfooter/labtop/picture11.png"
 import picture22 from "./imgfooter/labtop/picture22.png"
