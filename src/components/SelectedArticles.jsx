@@ -25,6 +25,7 @@ const SelectedArticles = ({ id, title, imageUrl, content, createdAt }) => {
         <div className="absolute top-2 left-2 bg-yellow-500 text-black px-2 py-1 rounded">
             گردشگری
         </div>
+        <h2 className="text-xl font-bold text-black">{title}</h2>
 
     </div>   
     </div>
