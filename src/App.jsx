@@ -20,7 +20,7 @@ import TicketChat from "./pages/TicketChat";
 import List from "./pages/List";
 import { LogOut } from "lucide-react";
 import LogoutConfirmation from "./components/Logout/Logout";
-import TravelExperience from "./pages/Profile/travelExperience";
+import TravelExperience from "./pages/Profile/TravelExperience";
 import MyExperienceArticle from "./pages/MyExperienceArticle";
 import EmptyPage from "./pages/AArticle/EmptyPage";
 import MyExperience from "./pages/MyExperience";
